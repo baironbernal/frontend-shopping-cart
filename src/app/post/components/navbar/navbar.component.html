@@ -1,0 +1,51 @@
+<div class="navbar">
+    <div class="navbar__logo">
+        <img src="/assets/logos/logo-black.png" alt="easy media logo" height="27px" width="28px">
+        <span class="navbar__easy-name">Easy Media</span>
+    </div>
+
+    <div class="navbar__icon-align" (click)="slide()">
+        <img *ngIf="!navbarList; else slidded" src="/assets/icons/align-justify.svg" alt="icon menu" height="30"
+            width="40">
+
+        <ng-template #slidded>
+            <img src="/assets/icons/x.svg" alt="x menu" height="30" width="40">
+        </ng-template>
+    </div>
+</div>
+
+<div class="navbarList" *ngIf="navbarList">
+    <div class="navbarList__title">
+        <b>{{ name }}</b>
+    </div>
+    <hr>
+    <div class="navbarList__items">
+        <ul>
+            <li routerLink="/post/create">
+                <img src="/assets/icons/lapiz.svg" alt="pencil" width="20" height="20">
+                <span>Create Publication</span>
+            </li>
+            <li routerLink="/post/my-publications">
+                <img src="/assets/icons/send.svg" alt="pencil" width="20" height="20">
+                <span>My Publications</span>
+            </li>
+            <li routerLink="/post/all-post">
+                <img src="/assets/icons/message.svg" alt="pencil" width="20" height="20">
+                <span>See All Publications</span>
+            </li>
+
+            <li routerLink="/cart/details">
+                <img src="/assets/icons/message.svg" alt="pencil" width="20" height="20">
+                <span>Mi Carrito</span>
+            </li>
+            <li routerLink="/product/all">
+                <img src="/assets/icons/message.svg" alt="pencil" width="20" height="20">
+                <span>Mis productos</span>
+            </li>
+            <li (click)="logOut()">
+                <img src="/assets/icons/lapiz.svg" alt="pencil" width="20" height="20">
+                <span>Logout</span>
+            </li>
+        </ul>
+    </div>
+</div>

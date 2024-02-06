@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<div class="post-container">
+    <h1>{{ h1 }}</h1>
+    <form class="post-container__form" [formGroup]="createPostForm" (ngSubmit)="createPost()" (keyup)="updateCardPost()">
+        <div class="form-item">
+            <label for="title">Title for message</label>
+            <input type="text" formControlName="title" placeholder="Your post title" name="title">
+        </div>
+        <div class="form-item">
+            <label for="message"> Messages</label>
+            <textarea id="story" formControlName="message" rows="8" cols="33" placeholder="Create message for share with your friends." name="message"></textarea>
+        </div>
+        <div class="post-container__button">
+            <shared-button [name]="'SHARE'"></shared-button>
+        </div>
+    </form>
+    <app-card [post]=post></app-card>
+</div>

@@ -1,0 +1,29 @@
+.card {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    min-height: 127px;
+    min-width: 277px;
+    width: 277px;
+    color: white;
+    margin: 15px 0;
+    h3 {
+        margin: 0;
+        font-size: 16px;
+    }
+    &__title,
+    &__message {
+        padding: 15px;
+    }
+    &__title {
+        background-color: rgba(88, 188, 219, 1);
+    }
+    &__message {
+        background-color: rgba(95, 94, 94, 1);
+    }
+    &__items {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

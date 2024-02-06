@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<div class="post-container">
+    <h1>{{ title}}</h1>
+    <div class="form-item">
+        <label for="search_word">Words to search</label>
+        <input type="text" placeholder="Your post title" name="search_word">
+    </div>
+    <div class="form-item">
+        <label for="date">Date select</label>
+        <input type="date" name="date">
+    </div>
+    <app-card *ngFor="let post of postsResponse.posts" [post]="post"></app-card>
+</div>

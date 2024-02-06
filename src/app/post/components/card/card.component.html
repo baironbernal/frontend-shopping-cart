@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card__title">
+        <h3 *ngIf="post.title; else titleDefault">{{ post.title}}</h3>
+        <ng-template #titleDefault>
+            <h3>Your post title</h3>
+        </ng-template>
+    </div>
+    <div class=" card__message ">
+        <span *ngIf="post.message;else messageDefault">{{ post.message }}</span>
+        <ng-template #messageDefault>
+            <h3>Create message for share with your friends.</h3>
+        </ng-template>
+        <div class=" card__items ">
+            <div class="card__date ">
+                {{ post.date_at | date:'shortDate'}} {{ now}}
+            </div>
+            <div class="card__autor ">
+                {{ post.user?.name}}
+            </div>
+        </div>
+    </div>
+</div>
