@@ -10,12 +10,14 @@ import { CardProductComponent } from './components/card-product/card-product.com
 
 
 
+
 @NgModule({
   declarations: [
     ListComponent,
     AllComponent,
     CreateComponent,
-    CardProductComponent
+    CardProductComponent,
+    
   ],
   imports: [
     CommonModule,
